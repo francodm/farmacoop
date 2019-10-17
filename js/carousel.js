@@ -16,7 +16,7 @@ nextButton.addEventListener('click', () => {
     moveFoward();
 })
 
-// setInterval(moveFoward, 10000);
+setInterval(moveFoward, 10000);
 
 prevButton.addEventListener('click', () => {
     if(counter<=0) return

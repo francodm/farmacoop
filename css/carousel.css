@@ -17,10 +17,12 @@
   flex-shrink: 0;
   flex-grow: 0;
   height: 100vh;
+  box-sizing: border-box;
   width: 100%;
   background-size: cover;
   font-family: "Khand", sans-serif;
   font-weight: bold;
+  
 }
 
 /* carousel images */
@@ -57,12 +59,15 @@
   display: flex;
   flex-direction: column;
   width: 30em;
-  margin: 5em 12em 0 0;
+  /* margin: 5em 8em 0 0; */
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 2em;
 }
 
 .img1 > .message_container > p {
   margin-top: -30px;
-  margin-left: 7em;
+  margin-left: 4em;
   color: rgb(163, 219, 219);
   font-size: 50px;
   width: 20em;
@@ -79,7 +84,9 @@
 #anmat_logo {
   width: 4em;
   border-radius: 50%;
-  margin: -190px -730px 0 0;
+  position: absolute;
+  bottom: 100px;
+  margin-left: 110px;
 }
 
 /* second image carousel setting */
@@ -112,8 +119,10 @@
   display: flex;
   flex-direction: column;
   color: #58a6a6;
-  margin: 7em 7em 0 0;
+  margin: 0 2em 2em 0;
   font-family: "Khand", sans-serif;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .img3 > .message_container > span {
@@ -129,7 +138,7 @@
 
 
 .img4 > .message_container {
-    margin: 7em 7em 0 0;
+    margin: 7em 5em 0 0;
   }
   
   .img4 > .message_container > a {
