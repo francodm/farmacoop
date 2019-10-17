@@ -26,6 +26,7 @@ body {
   border: none;
 }
 
+
 #logo {
   font-family: "Khand", sans-serif;
   font-size: 40px;
@@ -185,4 +186,122 @@ footer {
   margin-bottom: 1em;
   font-size: 20px;
   font-family: "Khand", sans-serif;
+}
+
+@media only screen and (max-width: 600px){
+  #navbar > ul{
+    display: none;
+  }
+
+  #carousel_container{
+    height: 30%;
+    width: 100%;
+  }
+
+  #navbar {
+    background: #bbebeb;
+  }
+
+
+ .visible{
+    height: 2em;
+    border-bottom: none;
+    background: #bbebeb;
+  }
+
+  .transparent{
+    height: 2em;
+    background: #bbebeb;
+  }
+
+  .container > .title-section {
+    font-size: 30px;
+  }
+
+  .container{
+    margin: 2em 0;
+  }
+
+  .servicios-container{
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .servicio {
+    height: 2em;
+    border-bottom: dotted 1px black;
+  }
+
+  .servicio > img{
+    display: none;
+  }
+
+  #carousel_container{
+    display: none;
+  }
+
+
+  .content-container{
+    padding: 0;
+  }
+  .content-container > section{
+    flex-direction: column;
+    margin: 2em 0;
+  }
+
+  .content-container > section > img{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .hidden{
+    height: 280px;
+    width: 100%;
+    background-image: url('../img/img_1.jpg');
+    background-position: top center;
+  }
+  .text-container{
+    width: 100%;
+    margin: 0;
+  }
+
+  .title{
+    margin: 0;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .text1{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .text2{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2em 1em;
+  }
+  #deposito{
+    display: none;
+  }
+
+  .second{
+    padding: 0;
+  }
+
+  #contacto{
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  
+
 }
