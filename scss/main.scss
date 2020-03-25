@@ -28,6 +28,9 @@ body>header {
   }
 
   @media (min-width: 1024px) {
+    a.btn {
+      @include transition;
+    }
 
     .container,
     a {

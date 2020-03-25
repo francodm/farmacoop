@@ -53,6 +53,12 @@ body > header {
     -ms-transition: all 0.8s ease;
     transition: all 0.8s ease; }
   @media (min-width: 1024px) {
+    body > header a.btn {
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
     body > header .container,
     body > header a {
       -moz-transition: all 0.3s ease;
