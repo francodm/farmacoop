@@ -1,151 +1,326 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html class="no-js overflow-x-hidden" lang="es">
 
 <head>
-    <meta charset="utf-8">
-
-    <title>Farmacoop</title>
-    <meta name="description">
-    <meta name="author" content="SitePoint">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Farmacoop</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="css/tailwind.min.css" rel="stylesheet">
+  <link href="css/glide.core.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/glide.theme.css">
+  <link href="css/main.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
 </head>
 
-<body>
-    <div id="navbar">
-        <div id="logo">
-            <span class="blue">farmacoop</span>
-            <span class="orange">LOGISTICA</span>
-        </div>
-        <ul>
-            <li> <a href="#quienes_somos"> Quienes Somos </a></li>
-            <li> <a href="#que_hacemos"> Que hacemos </a</li> <li><a href="#contacto"> Contacto </a></li>
-        </ul>
+<body class="overflow-x-hidden">
+  <header id="main-header" class="fixed">
+    <div class="container mx-auto flex justify-between items-center py-4 px-5 lg:py-8 lg:px-0">
+      <a id='logo-link' href="index.html">
+        <img id="logo" src="img/logo-w.svg" alt="Logo Farmacoop" class="w-32 lg:w-56">
+      </a>
+      <div class="flex items-center lg:hidden">
+        <a href="#donations" class="animated-btn text-lg text-white font-medium mr-8">Donar</a>
+        <svg id="menu-trigger" src="img/icons/menu.svg" alt="Menu" class="h-auto w-10"
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b398c"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </div>
+      <nav
+        class="text-lg font-medium flex items-center lg:pb-12 pointer-events-none lg:pointer-events-auto fixed lg:relative h-screen lg:h-auto w-screen lg:w-auto opacity-0 lg:opacity-100 lg:block left-0 top-0">
+        <img id="close-menu" src="img/icons/close.svg" alt="Cerrar menu" class="w-10 lg:hidden absolute">
+        <a href="#intro" class="mr-20">Sobre nosotros</a>
+        <a href="#products" class="mr-20">Nuestros productos</a>
+        <a href="#contact" class="mr-20">Contacto</a>
+        <a href="#donations" class="btn">Donaciones</a>
+      </nav>
     </div>
-    <div id="carousel_container">
-        <div class="carousel_slide">
-            <div id="lastClone" class="img4">
-                <div class=".message_container">
-                </div>
-            </div>
-            <div class="img1">
-                <div class="message_container">
-                    <p> 
-                        <span class="anmat_title">Certificados por ANMAT </span> <br>
-                        como distribuidora y operadora <br>
-                        logistica de medicamentos
-                        <img id="anmat_logo" src="./img/anmat_logo.png">
-                    </p>
-                    
-                </div>
-            </div>
-            <div class="img2">
-                <div class="message_container">
-                    <span>Almacenamos</span>
-                    <p> especialidades
-                        medicinales en general <br> rigiendonos por los mas altos
-                        standares de calidad
-                    </p>
-                </div>
-            </div>
-            <div class="img3">
-                <div class="message_container">
-                    <span>Tu producto </span>
-                    <p> seguro y al mejor precio del mercado
-                    </p>
-                </div>
-
-            </div>
-            <div class="img4">
-                <div class="message_container">
-                    <a href="#contacto"> Contactate con nosotros </a>
-                </div>
-            </div>
-            <div class="img1" id="firstClone">
-            </div>
+  </header>
+  <main>
+    <section id="landing" class="">
+      <div class="container mx-auto lg:grid px-5 lg:px-0">
+        <div class="text-white lg:max-w-sm">
+          <div class="uppercase tracking-mega text-sm text-gray-200 md:text-base">Somos Farmacoop</div>
+          <div class="mt-3 mb-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-min text-white">Salud para todo el
+            país</div>
+          <div class="text-xl md:text-2xl lg:text-base leading-relaxed text-white">
+            Somos una cooperativa farmacéutica,
+            empresa recuperada con <span class="font-bold text-white">valores de salud popular</span>.
+          </div>
+          <a class="btn white mt-8 font-medium" href="#intro">Sobre nosotros</a>
         </div>
-        <button id="prev_button">
-            < </button> <button id="next_button">>
-        </button>
-    </div>
-    
-    <div class="container">
-            <div class="hidden"></div>
-        <p class="title-section">SERVICIOS</p>
-        <div class="servicios-container">
-            <div class="servicio">
-                <img src="./img/001-box.svg">
-                <span>Almacenamiento</span>
-            </div>
-            <div class="servicio">
-                <img src="./img/002-notepad.svg">
-                <span>Control de stock</span>
-            </div>
-            <div class="servicio">
-                <img src="./img/003-delivery-truck.svg">
-                <span>Preparacion de pedidos</span>
-            </div>
+        <div class="mt-12 lg:mt-0">
+          <img src="img/landing.jpg" alt="Laboratorio">
         </div>
-        <div class="servicios-container">
-            <div class="servicio">
-                <img src="./img/004-thermometer.svg">
-                <span>Sistema de control de <br> temperatura online</span>
-            </div>
-            <div class="servicio">
-                <img src="./img/005-clock.svg">
-                <span>Sistema de trazabilidad <br> certificada en tiempo real</span>
-            </div>
+      </div>
+    </section>
+    <section id="intro" class="py-32">
+      <div class="container lg:mx-auto max-w-medium px-5 lg:px-0">
+        <div class="title w-line">Farmacoop (ex Roux-Ocefa) es el primer laboratorio farmacéutico recuperado en el mundo
         </div>
-    </div>
-    <div class="content-container">
-        <section>
-            <img src="./img/Roux-Ocefa-1.jpg">
-            <div class="text_container">
-                <p class="title" id="quienes_somos">Quienes somos?</p>
-                <p class="text1"> Somos una empresa conformada por ingenieros, farmacéuticos, técnicos y operarios que
-                    se formó a partir de la quiebra de Roux Ocefa S.A. Luego de la presentación de un proyecto con
-                    personal interdisciplinario la justicia nos otorgó la continuidad de la empresa.
-                    Nuestros profesionales y técnicos cuentan con más de 20 años en la industria.
-                </p>
+        <div class="glide max-w-xl">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <img src="img/intro-1.JPG" alt="Farmacoop">
+              </li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <img src="img/icons/arrow.svg" alt="">
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <img src="img/icons/arrow.svg" alt="">
+            </button>
+          </div>
+        </div>
+        <div class="my-10 max-w-2xl leading-loose text-lg lg:text-base">
+          Logramos reabrir este laboratorio y nuestra fuente de trabajo, apostando por volver a ser un laboratorio de
+          vanguardia en tecnología farmacéutica <span class="font-bold">con perspectiva social</span>.
+        </div>
+        <a href="#" class="btn">
+          Conocé nuestra historia
+          <div class="text-base text-white opacity-50">
+            (próximamente)
+          </div>
+        </a>
+      </div>
+    </section>
+    <section id="hero" class="pt-10">
+      <div class="container lg:mx-auto px-5 lg:px-0">
+        <div class="title w-line">
+          Farmacoop puede abastecer de barbijos y alcohol en gel de calidad a precios populares.
+        </div>
+      </div>
+    </section>
+    <section id="products" class="py-24 lg:py-10">
+      <div class="product h-product md:grid md:grid-cols-products md:gap-5 lg:block">
+        <img src="img/alcohol.png" alt="Alcohol en gel"
+          class="w-64 h-auto lg:w-auto lg:absolute left-0 lg:object-contain lg:h-full">
+        <div class="container lg:mx-auto flex justify-end px-5 lg:px-0">
+          <div class="max-w-lg lg:pr-10 lg:mr-10 mt-12 lg:mt-24 leading-loose line-bottom">
+            <div class="title">Alcohol en gel</div>
+            <div class="text-lg text-gray-700">Lamentablemente hemos visto que ante la especulación desmedida, y la
+              falta de este insumo, mucha gente se volcó a realizarlo de manera casera con resultados desastrosos.
+              Nosotros ponemos al servicio de la sociedad nuestros reactores y llenadoras para producir de mínima 2000
+              litros de alcohol en gel por día, en envases de 250 ml o bidones de 5 litros: un producto de calidad que
+              respeta todos los estándares sanitarios y que comercializaremos a un costo menor que el actual.</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="product h-product mt-24 lg:mt-12 flex flex-col items-end md:grid md:grid-cols-products-reversed md:reversed md:gap-5 lg:block">
+        <img src="img/barbijo.png" alt="Barbijo"
+          class="w-64 h-auto lg:w-auto lg:absolute right-0 lg:object-contain lg:h-full">
+        <div class="container mx-auto flex justify-start px-5 lg:px-0">
+          <div class="max-w-lg lg:pr-10 lg:mr-10 mt-12 lg:mt-24 leading-loose line-bottom">
+            <div class="title">Barbijos</div>
+            <div class="text-lg text-gray-700">Estamos centralizando logísticamente la producción de pequeñas y medianas
+              empresas que realizan barbijos. Desde Farmacoop aportamos lo necesario para su acopio y distribución.
+              Actualmente tenemos la capacidad de entregar 20 mil unidades por día y con posiblidad de duplicarla.</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-24 lg:mt-0">
+        <a href="#" class="btn mx-auto">
+          Conocé nuestros productos
+          <div class="text-base text-white opacity-50">
+            (próximamente)
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="lg:mt-32">
+      <div id='hero-2' class="bg-cover px-5 pt-56 pb-16 lg:pt-0 lg:pb-0 lg:bg-contain">
+        <div class="container mx-auto flex justify-end">
+          <div class="block md:max-w-lg lg:max-w-none">
+            <div class="title white max-w-3xl">
+              Frente a la emergencia sanitaria, debemos asegurar la producción de elementos que garanticen cuidados
+              preventivos.
             </div>
-        </section>
-        <section class="second">
-            <div class="text_container">
-                <p class="title" id="que_hacemos">Que hacemos?</p>
-                <p class="text2"> Nos dedicamos a la Distribución y Operación Logística de Medicamentos. Estamos
-                    habilitados por la ANMAT para dicho rubro. Contamos con sistema de trazabilidad on-line certificado
-                    y nuestros depósitos tienen un sistema de control y registro de temperatura en tiempo real que nos
-                    permite evitar cualquier alteración del producto que operamos.
-                    Nuestro objetivo es brindar a nuestros clientes un servicio de excelencia y al mejor precio del
-                    mercado.
-                </p>
+            <div class="text-2xl text-white align-left">
+              Por eso en Farmacoop nos comprometemos a:
             </div>
-            <img id="deposito" src="./img/deposito.jpg">
-
-        </section>
-    </div>
-    <footer id="contacto">
-        <div id="logo">
-            <span class="blue">farmacoop</span>
-            <span class="orange">LOGISTICA</span>
+          </div>
         </div>
-        <div class="contact_container">
-            <span class="contact_title">Dónde estamos?</span>
-            <span>Avenida Piedrabuena 3253</span>
-            <span>Ciudad de Buenos Aires</span>
-            <span>Argentina</span>
-            <span>C1439GVB</span>
+      </div>
+      <div id='commitment' class="container mx-auto max-w-5xl pt-10 lg:pt-24">
+        <div class="px-5 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+          <div class="block shadow-fc">
+            <img src="img/comp-gel.jpg" alt="Compromiso con gel">
+            <div class="text-xl p-6 leading-tight">Producir entre 8.000 y 10.000 frascos de alcohol en gel por
+              día.</div>
+          </div>
+          <div class="block shadow-fc">
+            <img src="img/comp-barbijos.jpg" alt="Compromiso con babijos">
+            <div class="text-xl p-6 leading-tight">Distribuir 20.000 barbijos por día.</div>
+          </div>
+          <div class="block shadow-fc md:col-span-2">
+            <img src="img/comp-costo.jpg" alt="Compromiso bajo costo">
+            <div class="text-xl p-6 leading-tight">Una venta al público a bajo costo. <span
+                class="font-black">Consideramos inmoral la especulación en tiempos de emergencia.</span></div>
+          </div>
         </div>
-        <div class="contact_container">
-            <span class="contact_title"> Contactanos </span>
-            <span> (011) 3244 7948 </span>
-            <span> farmacoop.logistica@gmail.com</span>
+      </div>
+    </section>
+    <section id='donations' class="pt-32 lg:mt-48 px-5 lg:px-0">
+      <div class="container mx-auto max-w-3xl">
+        <div class="title w-line">
+          Para poder trabajar y asegurar este nivel de producción, necesitamos todas las manos posibles.
         </div>
+        <div class="flex flex-wrap justify-center align-center">
+          <div class="block m-6 p-8 shadow-fc">
+            <img src="img/icons/donate-1.svg" alt="Ícono ayuda económica" class="icon mx-auto mt-4 mb-16">
+            <div class="text-center text-2xl font-bold mb-4">Ayuda Económica</div>
+            <div class="text-gray-800 text-lg mb-8 lg:mb-0">Gracias a tu donación Farmacoop produce insumos
+              indispensables para la lucha contra el coronavirus en Argentina. Todo aporte suma, ayudanos!
+            </div>
+            <div>
+              <a mp-mode="dftl"
+                href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=538650675-fe3c77f6-0e6c-4f4b-9dcf-df833e03527f"
+                name="MP-payButton" class='btn full mb-4'>Doná $1.000</a>
+              <a mp-mode="dftl"
+                href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=538650675-df229be6-05b8-40de-9a56-46c4c359853f"
+                name="MP-payButton" class='btn full mb-4'>Doná $10.000</a>
+              <a mp-mode="dftl"
+                href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=538650675-860f7da2-d743-495e-a3a5-7a1b63001424"
+                name="MP-payButton" class='btn full mb-4'>Doná $100.000</a>
+            </div>
+            <script type="text/javascript">
+              (function () {
+                function $MPC_load() {
+                  window.$MPC_loaded !== true && (function () {
+                    var s = document.createElement("script");
+                    s.type = "text/javascript";
+                    s.async = true;
+                    s.src = document.location.protocol + "//secure.mlstatic.com/mptools/render.js";
+                    var x = document.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                    window.$MPC_loaded = true;
+                  })();
+                }
+                window.$MPC_loaded !== true ? (window.attachEvent ? window.attachEvent('onload', $MPC_load) : window
+                  .addEventListener('load', $MPC_load, false)) : null;
+              })();
+            </script>
+          </div>
+          <div class="block m-6 p-8 shadow-fc">
+            <img src="img/icons/donate-2.svg" alt="Ícono ayuda materia prima" class="icon mx-auto mt-4 mb-16">
+            <div class="text-center text-2xl font-bold mb-4">Materia Prima</div>
+            <div class="text-gray-800 text-lg mb-8 lg:mb-0">Recibimos alcohol etílico y fliserina 80g. </div>
+            <a href="#contact" class="btn lg self-start">Donar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-32 lg:py-40">
+      <div class="container mx-auto px-5 lg:px-24">
+        <div class="title w-line lg:pb-20">Proponemos cooperación para combatira la pandemia del virus COVID-19.</div>
+        <div id="contact-list"
+          class="grid grid-cols-1 gap-5 justify-between items-start md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+          <div>
+            <div class="image-container shadow-fc">
+              <img src="img/icons/phone.svg" alt="Ícono teléfono">
+            </div>
+            <div class="text text-center mt-6 font-medium">
+              <div>(11) 3244-7948 <div class="text-base">(donaciones)</div>
+              </div>
+              <div class="mt-2">(11) 2481-6489 <div class="text-base">(ventas)</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="image-container shadow-fc">
+              <img src="img/icons/mail.svg" alt="Ícono email">
+            </div>
+            <div class="text mt-6 font-medium">coop.farmacooplimitada@gmail.com</div>
+          </div>
+          <div>
+            <a href="https://twitter.com/farmacoop_" target="_blank" class="text-center">
+              <div class="image-container shadow-fc">
+                <img src="img/icons/twitter.svg" alt="Ícono twitter">
+              </div>
+              <div class="text mt-6 font-medium">@farmacoop_</div>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/farmacoop_/" target="_blank" class="text-center">
+              <div class="image-container shadow-fc">
+                <img src="img/icons/instagram.svg" alt="Ícono instagram">
+              </div>
+              <div class="text mt-6 font-medium">@farmacoop_</div>
+            </a>
+          </div>
+        </div>
+        <div class="title w-line l-bottom pt-24">Comunicate con nosotros. Estamos disponibles
+          ante cualquier consulta</div>
+      </div>
+    </section>
+    <footer class="px-5 lg:px-32 pt-12 lg:pt-20 pb-8">
+      <div class="flex flex-wrap justify-between">
+        <div class="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-auto md:px-8 lg:px-2">
+          <img id='footer-logo' src="img/logo-w.svg" alt="Logo Farmacoop" class="w-32">
+          <div class="text-base mt-4 mb-6">coop.farmacooplimitada@gmail.com</div>
+          <div class="flex">
+            <a href="https://www.instagram.com/farmacoop_/" target="_blank">
+              <img src="img/icons/instagram-round.svg" alt="Instagram" class="w-12 mr-4">
+            </a>
+            <a href="https://twitter.com/farmacoop_" target="_blank">
+              <img src=" img/icons/twitter-round.svg" alt="Twitter" class="w-12">
+            </a>
+          </div>
+        </div>
+        <div class="mb-12 lg:mb-0 lg:mt-8 w-full md:w-1/2 lg:w-auto md:px-8 lg:px-2">
+          <div class="mb-6">
+            <a href="#intro" class="text-base lg:text-xl font-bold">Sobre nosotros</a>
+          </div>
+          <div class="mb-6">
+            <a href="#products" class="text-base lg:text-xl font-bold">Nuestros productos</a>
+          </div>
+          <div>
+            <a href="#donations" class="text-base lg:text-xl font-bold">Donaciones</a>
+          </div>
+        </div>
+        <div class="mb-12 lg:mb-0 lg:mt-8 w-full md:w-1/2 lg:w-auto md:px-8 lg:px-2">
+          <div class="text-base lg:text-xl font-bold mb-6">Contacto</div>
+          <div class="lg:text-base mb-6">
+            <div>
+              (11) 3244-7948
+              <span class="text-base">(donaciones)</span>
+            </div>
+          </div>
+          <div class="lg:text-base mb-6">
+            <div>(11) 2481-6489 <span class="text-base">(ventas)</span>
+            </div>
+          </div>
+          <div class="lg:text-base"><a
+              href="mailto:coop.farmacooplimitada@gmail.com">coop.farmacooplimitada@gmail.com</a>
+          </div>
+        </div>
+        <div class="mb-12 lg:mb-0 lg:mt-8 w-full md:w-1/2 lg:w-auto md:px-8 lg:px-2">
+          <div class="text-base lg:text-xl font-bold mb-6">¿Dónde estamos?</div>
+          <div class="lg:text-base mb-6">Avenida Piedrabuena 3253</div>
+          <div class="lg:text-base mb-6">Ciudad de Buenos Aires</div>
+          <div class="lg:text-base mb-6">Argentina</div>
+          <div class="lg:text-base">C1439GVB</div>
+        </div>
+      </div>
+      <div class="text-center">2020. Farmacoop</div>
     </footer>
-    <script src="js/navbar.js"></script>
-    <script src="js/carousel.js"></script>
+  </main>
+
+  <script src="js/vendor/glide.min.js"></script>
+  <script src="js/vendor/smooth-scroll.min.js"></script>
+  <script src="js/vendor/smooth-scroll.polyfills.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
