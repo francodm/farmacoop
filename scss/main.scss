@@ -244,9 +244,7 @@ html.menu-opened {
   .block {
     border-radius: 1.5rem;
     overflow: hidden;
-    display: grid;
-    max-width: 19rem;
-    grid-template-rows: 10rem 3rem minmax(0, 13rem) 1fr;
+    max-width: 25rem;
   }
 }
 
