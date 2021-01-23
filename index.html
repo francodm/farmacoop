@@ -41,9 +41,9 @@
 
 <body class="overflow-x-hidden">
   <header id="main-header" class="fixed">
-    <div class="container mx-auto flex justify-between items-center py-4 px-5 lg:py-8 lg:px-0">
-      <a id='logo-link' href="index.html">
-        <img id="logo" src="img/logo-w.svg" alt="Logo Farmacoop" class="w-32 lg:w-56">
+    <div class="container mx-auto flex justify-between items-center py-6 px-5 lg:py-16 lg:px-0">
+      <a id='logo-link' href="index.html" class="mt-6 lg:mt-0">
+        <img id="logo" src="img/logo-w.svg" alt="Logo Farmacoop" class="w-32 lg:w-40">
       </a>
       <div class="flex items-center lg:hidden">
         <svg id="menu-trigger" src="img/icons/menu.svg" alt="Menu" class="h-auto w-10"
@@ -65,6 +65,16 @@
   </header>
   <main>
     <section id="landing" class="">
+      <div id="topbar" class="absolute top-0 bg-gray-200 w-full z-10">
+        <ul class="flex items-center justify-end px-5 py-1">
+          <li>
+            <a href="https://farmacoop.org" target="_blank" class="flex items-center text-xs">
+              <img src="img/farmacoop-iso.svg" alt="Farmacoop" class="w-6 h-6 mr-1 filter-grayscale">
+              FarmaCov Test
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="container mx-auto lg:grid px-5 lg:px-0">
         <div class="text-white lg:max-w-sm">
           <div class="uppercase tracking-mega text-sm text-gray-200 md:text-base">Somos Farmacoop</div>
@@ -137,7 +147,32 @@
       </div>
     </section>
     <section id="products" class="py-24 lg:py-10">
-      <div class="product h-product md:grid md:grid-cols-products md:gap-5 lg:block">
+      <div
+        class="product h-product flex flex-col items-end md:grid md:grid-cols-products-reversed md:reversed md:gap-5 lg:block">
+        <img src="img/farmacov.png" alt="Farmacov Test"
+          class="w-64 h-auto lg:w-auto lg:absolute right-0 lg:object-contain lg:h-full">
+        <div class="container mx-auto flex justify-start px-5 lg:px-0">
+          <div class="max-w-lg lg:pr-10 lg:mr-10 mt-12 lg:mt-24 leading-loose line-bottom">
+            <div class="title">FarmaCov Test</div>
+            <div class="text-lg text-gray-700">FarmaCoV Test® es un test rápido serológico para detectar anticuerpos IgG
+              resultantes
+              de la exposición a SARS-CoV-2 de manera
+              cualitativa, que posee un tiempo de respuesta
+              entre 4 y 8 minutos.
+              Fue diseñado íntegramente por científicos
+              del Instituto CINDEFI-CONICET de la Universidad Nacional de La Plata en vinculación con
+              la empresa tecnológica Bamboo Biotech con
+              tecnología de punta en biología molecular.
+              <div class="mt-3  text-gray-700">
+                Más información en <a href="https://farmacov.com" target="_blank"
+                  class="font-bold text-main-color">farmacov.com</a>.
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product h-product mt-24 lg:mt-12 md:grid md:grid-cols-products md:gap-5 lg:block">
         <img src="img/alcohol.png" alt="Alcohol en gel"
           class="w-64 h-auto lg:w-auto lg:absolute left-0 lg:object-contain lg:h-full">
         <div class="container lg:mx-auto flex justify-end px-5 lg:px-0">

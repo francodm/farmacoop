@@ -33,7 +33,7 @@ body * {
 
 body > header {
   top: 0;
-  z-index: 10;
+  z-index: 11;
   width: 100vw;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -75,6 +75,9 @@ body > header {
     stroke: #fff; }
   body > header.collapse {
     background: var(--header-color); }
+    body > header.collapse .container {
+      padding-top: 1rem;
+      padding-bottom: 1rem; }
     body > header.collapse #logo {
       width: 5rem; }
   @media (min-width: 1024px) {
@@ -102,6 +105,9 @@ body > header {
     -ms-transition: all 0.8s ease;
     transition: all 0.8s ease; }
 
+html:not(.menu-opened) .collapse #logo-link {
+  margin-top: 0; }
+
 html.menu-opened {
   overflow: hidden; }
   html.menu-opened header nav {
@@ -125,21 +131,21 @@ html.menu-opened {
         padding: 0; }
   html.menu-opened #logo-link {
     z-index: 12;
-    transform: translateY(1rem);
-    -moz-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    -webkit-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    transition: all .8s ease, width .3s ease .6s; }
+    transform: translate(1rem, -1rem);
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease, width 0.3s ease 0.6s; }
     @media (min-width: 1024px) {
       html.menu-opened #logo-link {
         transform: none; } }
     html.menu-opened #logo-link #logo {
-      width: 5rem; }
+      width: 8rem; }
 
 #landing {
   min-height: calc(var(--vh, 1vh) * 107);
-  padding-top: calc(var(--header-height) + 10vh);
+  padding-top: calc(var(--header-height) + 15vh);
   background-image: url("../img/1-01.jpg");
   background-size: 160%;
   background-repeat: no-repeat; }
@@ -388,5 +394,18 @@ section {
   @media (min-width: 1024px) {
     .h-product {
       height: 35rem; } }
+
+.filter-grayscale {
+  filter: grayscale(1); }
+
+#topbar a img {
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+#topbar a:hover img {
+  filter: grayscale(0); }
 
 /*# sourceMappingURL=main.css.map */

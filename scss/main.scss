@@ -13,9 +13,9 @@ body * {
   color: #222;
 }
 
-body>header {
+body > header {
   top: 0;
-  z-index: 10;
+  z-index: 11;
   width: 100vw;
   @include transition;
 
@@ -24,7 +24,7 @@ body>header {
   }
 
   #logo {
-    @include transition(.8s);
+    @include transition(0.8s);
   }
 
   @media (min-width: 1024px) {
@@ -46,7 +46,10 @@ body>header {
   &.collapse {
     background: var(--header-color);
 
-    .container {}
+    .container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
 
     #logo {
       width: 5rem;
@@ -87,8 +90,12 @@ body>header {
   }
 
   #logo-link {
-    @include transition(.8s);
+    @include transition(0.8s);
   }
+}
+
+html:not(.menu-opened) .collapse #logo-link {
+  margin-top: 0;
 }
 
 html.menu-opened {
@@ -104,7 +111,7 @@ html.menu-opened {
     justify-content: center;
     @include transition;
 
-    &>a {
+    & > a {
       margin: 1.5rem 0;
       font-size: 1.5rem;
       color: #fff;
@@ -117,28 +124,27 @@ html.menu-opened {
 
   #logo-link {
     z-index: 12;
-    transform: translateY(1rem);
+    transform: translate(1rem, -1rem);
 
     @media (min-width: 1024px) {
       transform: none;
     }
 
-    -moz-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    -webkit-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    transition: all .8s ease,
-    width .3s ease .6s;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease, width 0.3s ease 0.6s;
 
     #logo {
-      width: 5rem;
+      width: 8rem;
     }
   }
 }
 
 #landing {
   min-height: calc(var(--vh, 1vh) * 107);
-  padding-top: calc(var(--header-height) + 10vh);
+  padding-top: calc(var(--header-height) + 15vh);
   background-image: url("../img/1-01.jpg");
   background-size: 160%;
   background-repeat: no-repeat;
@@ -184,11 +190,11 @@ html.menu-opened {
   .md\:grid-cols-products-reversed {
     grid-template-columns: 1fr 0.5fr;
 
-    &> :nth-child(1) {
+    & > :nth-child(1) {
       order: 2;
     }
 
-    &> :nth-child(2) {
+    & > :nth-child(2) {
       order: 1;
     }
   }
@@ -212,7 +218,7 @@ html.menu-opened {
   @media (min-width: 1024px) {
     height: 45rem;
 
-    .block>* {
+    .block > * {
       padding-left: 4rem;
     }
 
@@ -250,7 +256,7 @@ html.menu-opened {
 
 #contact {
   #contact-list {
-    &>div {
+    & > div {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -376,7 +382,7 @@ footer {
 }
 
 #donations .block,
-#contact #contact-list>div {
+#contact #contact-list > div {
   @include transition;
 
   @media (hover: hover) {
@@ -491,4 +497,16 @@ section {
   @media (min-width: 1024px) {
     height: 35rem;
   }
+}
+
+.filter-grayscale {
+  filter: grayscale(1);
+}
+
+#topbar a img {
+  @include transition;
+}
+
+#topbar a:hover img {
+  filter: grayscale(0);
 }
