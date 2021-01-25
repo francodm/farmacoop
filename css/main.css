@@ -33,7 +33,7 @@ body * {
 
 body > header {
   top: 0;
-  z-index: 11;
+  z-index: 9;
   width: 100vw;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -110,25 +110,27 @@ html:not(.menu-opened) .collapse #logo-link {
 
 html.menu-opened {
   overflow: hidden; }
-  html.menu-opened header nav {
-    pointer-events: all;
-    opacity: 1;
-    background: var(--secondary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    html.menu-opened header nav > a {
-      margin: 1.5rem 0;
-      font-size: 1.5rem;
-      color: #fff; }
-      html.menu-opened header nav > a:not(.btn) {
-        padding: 0; }
+  html.menu-opened header {
+    z-index: 11; }
+    html.menu-opened header nav {
+      pointer-events: all;
+      opacity: 1;
+      background: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      html.menu-opened header nav > a {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        color: #fff; }
+        html.menu-opened header nav > a:not(.btn) {
+          padding: 0; }
   html.menu-opened #logo-link {
     z-index: 12;
     transform: translate(1rem, -1rem);
